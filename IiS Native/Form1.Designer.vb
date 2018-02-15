@@ -208,31 +208,31 @@ Partial Class MainFrm
         'CalculatorToolStripMenuItem
         '
         Me.CalculatorToolStripMenuItem.Name = "CalculatorToolStripMenuItem"
-        Me.CalculatorToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CalculatorToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
         Me.CalculatorToolStripMenuItem.Text = "Calculator"
         '
         'NotepadToolStripMenuItem
         '
         Me.NotepadToolStripMenuItem.Name = "NotepadToolStripMenuItem"
-        Me.NotepadToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NotepadToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
         Me.NotepadToolStripMenuItem.Text = "Notepad"
         '
         'WordpadToolStripMenuItem
         '
         Me.WordpadToolStripMenuItem.Name = "WordpadToolStripMenuItem"
-        Me.WordpadToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.WordpadToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
         Me.WordpadToolStripMenuItem.Text = "Wordpad"
         '
         'TaskManagerToolStripMenuItem
         '
         Me.TaskManagerToolStripMenuItem.Name = "TaskManagerToolStripMenuItem"
-        Me.TaskManagerToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TaskManagerToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
         Me.TaskManagerToolStripMenuItem.Text = "Task Manager"
         '
         'SystemInfoToolStripMenuItem
         '
         Me.SystemInfoToolStripMenuItem.Name = "SystemInfoToolStripMenuItem"
-        Me.SystemInfoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SystemInfoToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
         Me.SystemInfoToolStripMenuItem.Text = "System Info."
         '
         'CommunicationToolStripMenuItem

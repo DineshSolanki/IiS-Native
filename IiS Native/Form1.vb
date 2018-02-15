@@ -193,4 +193,8 @@ Public Class MainFrm
     End Sub
 
 
+    Private Sub ActivityLogToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ActivityLogToolStripMenuItem.Click
+        Dim ActivityLog As New actlog
+        actlog.ShowDialog()
+    End Sub
 End Class
