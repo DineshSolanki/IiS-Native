@@ -234,6 +234,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="Projectformatreport us.docx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Help\" />
