@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 16.5" name="FMIDATA">
+  <DataContextMoniker Name="/FMIDATADataContext" />
+  <nestedChildShapes>
+    <classShape Id="74d08399-09ad-458b-be33-7008fcc0f13f" absoluteBounds="6.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/FMIDATADataContext/Activation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5edbab21-9e55-46c0-8bbc-d2d247ba1b38" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7988ba32-b28c-4479-9f4d-a55e5030e414" absoluteBounds="6.25, 6.375, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/FMIDATADataContext/FeeData" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ddd4d38d-a213-402a-bdc4-4fb835f7224a" absoluteBounds="6.265, 6.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e4a81241-02c1-4318-a013-68e591981d92" absoluteBounds="3.5, 14.5, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/FMIDATADataContext/FeeStructure" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd7aeb77-e73e-4574-a594-10906607479b" absoluteBounds="3.515, 14.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="91d2e067-7613-4381-9d07-05a6d3a1acf3" absoluteBounds="8.75, 3.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/FMIDATADataContext/InstituteInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b2b0c206-6225-4324-b093-cc060635a9d8" absoluteBounds="8.765, 4.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fdd2604b-ff58-4456-9811-89268aefdbb4" absoluteBounds="8.75, 7.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/FMIDATADataContext/Log" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eb61d33a-0a03-4162-b9d3-9685d01d6498" absoluteBounds="8.765, 8.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cc4e9dd0-5d52-4dad-a04f-9d4e5df941b3" absoluteBounds="0.75, 6.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/FMIDATADataContext/Session" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7137599a-e9ee-43c9-b1b5-4f7a15bfccdb" absoluteBounds="0.765, 7.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a37b272a-7311-451f-afcc-57fc5e703c1b" absoluteBounds="6.75, 10.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/FMIDATADataContext/Staff" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d8a612e4-39de-406c-9a83-00a9079edd99" absoluteBounds="6.765, 11.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="270020fc-169f-40a9-933a-006daf022790" absoluteBounds="6.25, 3.375, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/FMIDATADataContext/Transact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="79628851-2d6a-4406-8d68-2d1a8213d06e" absoluteBounds="6.265, 3.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eb4d9772-7e56-403f-b5be-8107ec201d09" absoluteBounds="9.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/FMIDATADataContext/USER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="662b9b68-f5b6-4483-8893-5561a5136334" absoluteBounds="9.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6213537e-a4a4-4fa1-97d1-254303981f9a" absoluteBounds="3.5, 1.375, 2, 11.962872721354163">
+      <DataClassMoniker Name="/FMIDATADataContext/Student" />
+      <nestedChildShapes>
+        <elementListCompartment Id="31a37ed5-fc19-4ea7-9517-a7fd41685b74" absoluteBounds="3.515, 1.835, 1.9700000000000002, 11.402872721354166" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 15.3854484049479); (6.46875 : 15.3854484049479); (6.46875 : 8.53049967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FMIDATADataContext/FeeStructure/FeeStructure_FeeData" />
+      <nodes>
+        <classShapeMoniker Id="e4a81241-02c1-4318-a013-68e591981d92" />
+        <classShapeMoniker Id="7988ba32-b28c-4479-9f4d-a55e5030e414" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 14.5013612283153); (5.875 : 14.1263612283153); (5.875 : 4.45274983723958); (6.25 : 4.45274983723958)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FMIDATADataContext/FeeStructure/FeeStructure_Transact" />
+      <nodes>
+        <classShapeMoniker Id="e4a81241-02c1-4318-a013-68e591981d92" />
+        <classShapeMoniker Id="270020fc-169f-40a9-933a-006daf022790" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 7.45274983723958); (5.79166666666667 : 7.45274983723958 : JumpStart); (5.95833333333333 : 7.45274983723958 : JumpEnd); (6.25 : 7.45274983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FMIDATADataContext/Student/Student_FeeData" />
+      <nodes>
+        <classShapeMoniker Id="6213537e-a4a4-4fa1-97d1-254303981f9a" />
+        <classShapeMoniker Id="7988ba32-b28c-4479-9f4d-a55e5030e414" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 3.85137491861979); (6.25 : 3.85137491861979)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FMIDATADataContext/Student/Student_Transact" />
+      <nodes>
+        <classShapeMoniker Id="6213537e-a4a4-4fa1-97d1-254303981f9a" />
+        <classShapeMoniker Id="270020fc-169f-40a9-933a-006daf022790" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.34699625651042); (3.5 : 7.34699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/FMIDATADataContext/Session/Session_Student" />
+      <nodes>
+        <classShapeMoniker Id="cc4e9dd0-5d52-4dad-a04f-9d4e5df941b3" />
+        <classShapeMoniker Id="6213537e-a4a4-4fa1-97d1-254303981f9a" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

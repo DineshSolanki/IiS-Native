@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1ED0B017-4165-4FA8-9FBB-878130DB8A3C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Institute_Information_System.My.MyApplication</StartupObject>
+    <RootNamespace>Institute_Information_System</RootNamespace>
+    <AssemblyName>Institute Information System</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>fc848ddd</NuGetPackageImportStamp>
+    <PublishUrl>C:\Users\Hackeriya Balam\Desktop\FMI\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>http://FMI.neocities.org/IMS</SupportUrl>
+    <SuiteName>IMS Tools</SuiteName>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Institute Information System.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Institute Information System.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>AC98864508A6C04F9F1F9616990FDCC20C3DBE4B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Institute Information System_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Graduation Cap.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v21.1.Export, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Charts.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v21.1.Wizard, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v21.1.UI, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v21.1.Extensions, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="TouchlessLib">
+      <HintPath>.\TouchlessLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Comm Mod\DashBoard.Designer.vb">
+      <DependentUpon>DashBoard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Comm Mod\DashBoard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data Mod\DataBase.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBase.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Institute Mod\DetailedFeeData.Designer.vb">
+      <DependentUpon>DetailedFeeData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Institute Mod\DetailedFeeData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Function Modules\Encryption.vb" />
+    <Compile Include="Institute Mod\FeeDataOneView.Designer.vb">
+      <DependentUpon>FeeDataOneView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Institute Mod\FeeDataOneView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Institute Mod\FeeStruct.Designer.vb">
+      <DependentUpon>FeeStruct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Institute Mod\FeeStruct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data Mod\FMIDATA.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FMIDATA.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Help Mod\frmAbout.Designer.vb">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Help Mod\frmAbout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main Module\frmActivation.Designer.vb">
+      <DependentUpon>frmActivation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main Module\frmActivation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Mod\InstituteDetail.Designer.vb">
+      <DependentUpon>InstituteDetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Mod\InstituteDetail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comm Mod\LogForm.Designer.vb">
+      <DependentUpon>LogForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Comm Mod\LogForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main Module\LoginForm1.Designer.vb">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main Module\LoginForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main Module\mainfrm.Designer.vb">
+      <DependentUpon>mainfrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main Module\mainfrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Mod\ManageUser.Designer.vb">
+      <DependentUpon>ManageUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Mod\ManageUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Function Modules\ModClasses.vb" />
+    <Compile Include="Function Modules\ModFunc.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Institute Mod\printrecipt.Designer.vb">
+      <DependentUpon>printrecipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Institute Mod\printrecipt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Mod\PromoteStu.Designer.vb">
+      <DependentUpon>PromoteStu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Student Mod\PromoteStu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Institute Mod\SessionEntry.Designer.vb">
+      <DependentUpon>SessionEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Institute Mod\SessionEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main Module\SplashScreen1.Designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main Module\SplashScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff Mod\StaffAdd.Designer.vb">
+      <DependentUpon>StaffAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Staff Mod\StaffAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff Mod\StaffRecord.Designer.vb">
+      <DependentUpon>StaffRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Staff Mod\StaffRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Mod\StudentAdd.Designer.vb">
+      <DependentUpon>StudentAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Student Mod\StudentAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Mod\StuRecord.Designer.vb">
+      <DependentUpon>StuRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Student Mod\StuRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools Mod\SystemInfo.Designer.vb">
+      <DependentUpon>SystemInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools Mod\SystemInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Mod\TC.Designer.vb">
+      <DependentUpon>TC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Student Mod\TC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="etc\WebCam.Designer.vb">
+      <DependentUpon>WebCam.vb</DependentUpon>
+    </Compile>
+    <Compile Include="etc\WebCam.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="etc\XtraReport1.Designer.vb">
+      <DependentUpon>XtraReport1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="etc\XtraReport1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Comm Mod\DashBoard.resx">
+      <DependentUpon>DashBoard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Institute Mod\DetailedFeeData.resx">
+      <DependentUpon>DetailedFeeData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Institute Mod\FeeDataOneView.resx">
+      <DependentUpon>FeeDataOneView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Institute Mod\FeeStruct.resx">
+      <DependentUpon>FeeStruct.vb</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Data Mod\DataBase.xsc">
+      <DependentUpon>DataBase.xsd</DependentUpon>
+    </None>
+    <None Include="Data Mod\DataBase.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBase.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Data Mod\DataBase.xss">
+      <DependentUpon>DataBase.xsd</DependentUpon>
+    </None>
+    <None Include="Data Mod\FMIDATA.dbml.layout">
+      <DependentUpon>FMIDATA.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Help Mod\frmAbout.resx">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main Module\frmActivation.resx">
+      <DependentUpon>frmActivation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Mod\InstituteDetail.resx">
+      <DependentUpon>InstituteDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comm Mod\LogForm.resx">
+      <DependentUpon>LogForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main Module\LoginForm1.resx">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main Module\mainfrm.resx">
+      <DependentUpon>mainfrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Mod\ManageUser.resx">
+      <DependentUpon>ManageUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Institute Mod\printrecipt.resx">
+      <DependentUpon>printrecipt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Mod\PromoteStu.resx">
+      <DependentUpon>PromoteStu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Institute Mod\SessionEntry.resx">
+      <DependentUpon>SessionEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff Mod\StaffRecord.resx">
+      <DependentUpon>StaffRecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Mod\StuRecord.resx">
+      <DependentUpon>StuRecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools Mod\SystemInfo.resx">
+      <DependentUpon>SystemInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Mod\TC.resx">
+      <DependentUpon>TC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="etc\WebCam.resx">
+      <DependentUpon>WebCam.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="etc\XtraReport1.resx">
+      <DependentUpon>XtraReport1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main Module\SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff Mod\StaffAdd.resx">
+      <DependentUpon>StaffAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Mod\StudentAdd.resx">
+      <DependentUpon>StudentAdd.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Institute Information System_TemporaryKey.pfx" />
+    <None Include="Data Mod\FMIDATA.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>FMIDATA.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Graduation Cap.ico" />
+    <Content Include="Help Mod\Help.txt" />
+    <None Include="Resources\Database_24px.png" />
+    <None Include="Resources\Data Backup_24px.png" />
+    <None Include="Resources\System Information_50px.png" />
+    <None Include="Resources\Calculator_32px.png" />
+    <None Include="Resources\TXT_64px.png" />
+    <None Include="Resources\TXT_48px.png" />
+    <None Include="Resources\Microsoft Word_26px.png" />
+    <None Include="Resources\System Task_26px.png" />
+    <None Include="Resources\Change Theme_64px.png" />
+    <None Include="Resources\Facebook Messenger_48px.png" />
+    <None Include="Resources\WhatsApp_40px.png" />
+    <None Include="Resources\IMG_99078_12.jpg" />
+    <Content Include="Data Mod\IMSData.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data Mod\IMSData_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>IMSData.mdf</DependentUpon>
+    </Content>
+    <Content Include="etc\WebCamLib.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Webcamcolor_50px.png" />
+    <None Include="Resources\photo.jpg" />
+    <None Include="Resources\Technology-Wallpaper-1.jpg" />
+    <None Include="Resources\Transfer certificate512px.png" />
+    <None Include="Resources\Medal_512px.png" />
+    <None Include="Resources\Books_512px.png" />
+    <None Include="Resources\Thank.png" />
+    <None Include="Resources\Letterhead1_512px.png" />
+    <None Include="Resources\Foul_512px.png" />
+    <None Include="Resources\Rules_512px.png" />
+    <None Include="Resources\High Importance_512px.png" />
+    <None Include="Resources\Feedback_512px.png" />
+    <None Include="Resources\Help_512px.png" />
+    <None Include="Resources\Details Popup_512px.png" />
+    <None Include="Resources\User Groups_512px.png" />
+    <None Include="Resources\Send_512px.png" />
+    <None Include="Resources\Send Mass Email_512px.png" />
+    <None Include="Resources\Cash Register_512px.png" />
+    <None Include="Resources\View File_512px.png" />
+    <None Include="Resources\Money_512px.png" />
+    <None Include="Resources\ID Card_512px.png" />
+    <None Include="Resources\Diploma 1_512px.png" />
+    <None Include="Resources\Magical Scroll_512px.png" />
+    <None Include="Resources\Edit User Male_512px.png" />
+    <None Include="Resources\Add User Group Woman Man_520px.png" />
+    <None Include="Resources\User Shield_512px.png" />
+    <None Include="Resources\no-image-50.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Fkosoft.FontAwesome">
+      <Version>1.1.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="PrettyBin">
+      <Version>1.1.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

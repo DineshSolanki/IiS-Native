@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="IMSData" Class="FMIDATADataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\lib\IMSData.mdf;Initial Catalog=IMSData;Integrated Security=True;User Instance=False" SettingsObjectName="Institute_Information_System.My.MySettings" SettingsPropertyName="FMIDATAConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Activation" Member="Activations">
+    <Type Name="Activation">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HardwareID" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="SerialNo" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="ActivationID" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FeeData" Member="FeeDatas">
+    <Type Name="FeeData">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Total Fee]" Member="Total_Fee" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="[Due ]" Member="Due_" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Fee_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[SR no]" Member="SR_no" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="[Date of Deposit]" Member="Date_of_Deposit" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="FeeStructure_FeeData" Member="FeeStructure" ThisKey="Fee_id" OtherKey="Fees_Id" Type="FeeStructure" IsForeignKey="true" />
+      <Association Name="Student_FeeData" Member="Student" ThisKey="SR_no" OtherKey="SR_no" Type="Student" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FeeStructure" Member="FeeStructures">
+    <Type Name="FeeStructure">
+      <Column Name="Fees_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Fee" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Admision Fee]" Member="Admision_Fee" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[Total Fee]" Member="Total_Fee" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="FeeStructure_FeeData" Member="FeeDatas" ThisKey="Fees_Id" OtherKey="Fee_id" Type="FeeData" />
+      <Association Name="FeeStructure_Transact" Member="Transacts" ThisKey="Fees_Id" OtherKey="Fee_id" Type="Transact" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InstituteInfo" Member="InstituteInfos">
+    <Type Name="InstituteInfo">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Institute Name]" Member="Institute_Name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="[Principal Name]" Member="Principal_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Director Name]" Member="Director_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="[Phone Number]" Member="Phone_Number" Type="System.String" DbType="NVarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Logo" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="[Reg No]" Member="Reg_No" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Logs" Member="Logs">
+    <Type Name="Log">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Operation" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sessions" Member="Sessions">
+    <Type Name="Session">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Session" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Session_Student" Member="Students" ThisKey="Session" OtherKey="Session" Type="Student" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Staff" Member="Staffs">
+    <Type Name="Staff">
+      <Column Name="Staff_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Father's Name]" Member="Father_s_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Join Date]" Member="Join_Date" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Salary" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="[Leave date]" Member="Leave_date" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Designation" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Extra Notes]" Member="Extra_Notes" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="Pic" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Transact" Member="Transacts">
+    <Type Name="Transact">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DateOfDeposit" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Fee_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[SR no]" Member="SR_no" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="AmountPaid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Depositor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Month" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="FeeStructure_Transact" Member="FeeStructure" ThisKey="Fee_id" OtherKey="Fees_Id" Type="FeeStructure" IsForeignKey="true" />
+      <Association Name="Student_Transact" Member="Student" ThisKey="SR_no" OtherKey="SR_no" Type="Student" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.USERS" Member="USERs">
+    <Type Name="USER">
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Full Name]" Member="Full_Name" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="PasswordHash" Type="System.Data.Linq.Binary" DbType="Binary(64) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Students" Member="Students">
+    <Type Name="Student">
+      <Column Name="Student_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DOB" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Cast" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Subcast" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Religion" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[SR no]" Member="SR_no" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SNo" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="Fno" Type="System.String" DbType="NVarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="MNo" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="PreClass" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="adClass" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Gaddress" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="GNo" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="PreSchool" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GName" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="profilePic" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Section" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Session" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DOA" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Medium" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Bplace" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="BGroup" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="HStay" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="Handicap" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="Mproblem" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Fpay" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="FDesig" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="MPay" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="MDesig" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Board1" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="RollNo1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Year1" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="BName1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Grade1" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="per1" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Board2" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="RollNo2" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Year2" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Bname2" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Grade2" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Per2" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Sib1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Class1" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Sib2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Class2" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Sib3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Class3" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Sib4" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Class4" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="CurrentClass" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="[TC No]" Member="TC_No" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[TC Reason]" Member="TC_Reason" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Student_FeeData" Member="FeeDatas" ThisKey="SR_no" OtherKey="SR_no" Type="FeeData" />
+      <Association Name="Student_Transact" Member="Transacts" ThisKey="SR_no" OtherKey="SR_no" Type="Transact" />
+      <Association Name="Session_Student" Member="Session1" ThisKey="Session" OtherKey="Session" Type="Session" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.ADDUSER" Method="ADDUSER">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(40)" />
+    <Parameter Name="FullName" Parameter="fullName" Type="System.String" DbType="NVarChar(40)" />
+    <Parameter Name="password" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="responseMessage" Type="System.String" DbType="NVarChar(250)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.login" Method="login">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="password" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="responseMessage" Type="System.String" DbType="NVarChar(250)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
