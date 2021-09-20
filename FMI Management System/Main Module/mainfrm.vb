@@ -204,7 +204,7 @@ Public Class Mainfrm
     End Sub
     Sub Backup()
         Cursor = Cursors.WaitCursor
-        Con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+        Con = New SqlConnection(My.Settings.FMIDataConnectionString)
         Dim destdir As String = "D:\backupdb"
         If Not Directory.Exists(destdir) Then
             Directory.CreateDirectory("D:\backupdb")
@@ -232,7 +232,7 @@ Public Class Mainfrm
             If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
                 Cursor = Cursors.WaitCursor
                 SqlConnection.ClearAllPools()
-                Con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+                Con = New SqlConnection(My.Settings.FMIDataConnectionString)
                 Con.Open()
                 Dim cb As String = "USE Master ALTER DATABASE IMSData SET Single_User WITH Rollback Immediate Restore database IMSData FROM disk='" & OpenFileDialog1.FileName & "' WITH REPLACE ALTER DATABASE IMSData SET Multi_User "
                 Cmd = New SqlCommand(cb)

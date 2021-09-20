@@ -7,7 +7,7 @@ Public Class Tc
     Private Sub SimpleButton4_Click(sender As Object, e As EventArgs) Handles SimpleButton4.Click
         listView1.Items.Clear()
         Try
-            con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+            con = New SqlConnection(My.Settings.FMIDataConnectionString)
             con.Open()
             cmd =
                 New SqlCommand(
@@ -37,7 +37,7 @@ Public Class Tc
 
         listView1.Items.Clear()
         Try
-            con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+            con = New SqlConnection(My.Settings.FMIDataConnectionString)
             con.Open()
             cmd =
                 New SqlCommand(
@@ -96,7 +96,7 @@ Public Class Tc
             txtTCNo.Focus()
             Exit Sub
         End If
-        con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+        con = New SqlConnection(My.Settings.FMIDataConnectionString)
         Dim cd = "update students set status=@st,[TC No]=@tc,Reason=@Reason where [SR no]=@d2"
         cmd = New SqlCommand(cd)
         cmd.Parameters.AddWithValue("st", "InActive")

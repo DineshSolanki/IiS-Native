@@ -94,7 +94,7 @@ Partial Public Class FMIDATADataContext
   #End Region
 	
 	Public Sub New()
-		MyBase.New(Global.Institute_Information_System.My.MySettings.Default.FMIDATAConnectionString, mappingSource)
+		MyBase.New(Global.Institute_Information_System.My.MySettings.Default.FMIDataConnectionString, mappingSource)
 		OnCreated
 	End Sub
 	

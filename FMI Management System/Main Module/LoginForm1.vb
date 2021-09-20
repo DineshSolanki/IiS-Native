@@ -18,7 +18,7 @@ Public Class LoginForm1
         'Catch ex As Exception
         '    MessageBox.Show(ex.Message)
         'End Try
-        _con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+        _con = New SqlConnection(My.Settings.FMIDataConnectionString)
         _cmd = New SqlCommand("login", _con)
         _cmd.Parameters.AddWithValue("UserName", UsernameTextBox.Text)
         _cmd.Parameters.AddWithValue("Password", PasswordTextBox.Text)

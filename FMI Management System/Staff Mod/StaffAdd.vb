@@ -18,7 +18,7 @@ Public Class StaffAdd
             XtraMessageBox.Show("Please Fill all Information")
         Else
             Try
-                _con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+                _con = New SqlConnection(My.Settings.FMIDataConnectionString)
                 _con.Open()
                 _query = "insert into Staff([Name],[Father's Name],[Join Date],[Salary],[Designation],[Extra Notes],[Mobile],[image]) values(@Name,@fname,@JDate,@salary,@desig,@ENotes,@mobile,@image)"
                 _cmd = New SqlCommand(_query, _con)

@@ -33,7 +33,7 @@ Public Class StuRecord
         LoadSessions()
         GridView1.OptionsBehavior.Editable = False
         GridView2.OptionsBehavior.Editable = False
-        _con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+        _con = New SqlConnection(My.Settings.FMIDataConnectionString)
         'TODO: This line of code loads data into the 'DataBase.Students' table. You can move, or remove it, as needed.
         _adapter.SelectCommand =
             New SqlCommand(

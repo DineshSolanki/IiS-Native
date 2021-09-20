@@ -93,7 +93,7 @@ Public Class DetailedFeeData
         'GridControl1.DataSource = myTable
         'con.Close()
         'GridView1.RestoreLayoutFromXml("C:\Users\Hackeriya Balam\Desktop\ICONS\Myl.xml")
-        con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+        con = New SqlConnection(My.Settings.FMIDataConnectionString)
         query = "Select ProfilePic from Students where [SR no]=@srn OR Name=@name AND Fname=@fname AND MName=@mname"
         cmd = New SqlCommand(query, con)
         cmd.Parameters.AddWithValue("srn", SrCombo.Text)

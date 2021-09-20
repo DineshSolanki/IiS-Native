@@ -18,7 +18,7 @@ Public Class InstituteDetail
             _query = "insert into instituteinfo([Institute Name],[principal Name],[Address],[Phone Number],[email],[Logo],[Reg No],[Director Name]) values(@IName,@Pname,@Addr,@Pno,@Email,@logo,@reg,@DName) "
         End If
         'Try
-        _con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+        _con = New SqlConnection(My.Settings.FMIDataConnectionString)
         _con.Open()
 
         _cmd = New SqlCommand(_query, _con)
@@ -52,7 +52,7 @@ Public Class InstituteDetail
             Phone_NumberTextEdit.Text = isalready.FirstOrDefault.Phone_Number
             EmailTextEdit.Text = isalready.FirstOrDefault.Email
             txtDName.Text = isalready.FirstOrDefault.Director_Name
-            _con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+            _con = New SqlConnection(My.Settings.FMIDataConnectionString)
             _query = "Select Logo from InstituteInfo Where Id=1"
             _cmd = New SqlCommand(_query, _con)
             _con.Open()

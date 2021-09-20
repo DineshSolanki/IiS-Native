@@ -48,7 +48,7 @@ Public Class StudentAdd
         Panel7.AutoScroll = True
         MaximizeBox = False
         DateAdm.Text = Date.Now.ToString("dd/MM/yyyy")
-        con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+        con = New SqlConnection(My.Settings.FMIDataConnectionString)
         LoadSessions()
         query = "Select Session from Sessions where Id=(select max(Id) from Sessions) "
         If con.State = ConnectionState.Open Then
@@ -260,7 +260,7 @@ Public Class StudentAdd
     Private Sub Last()
         Dim lastid As Integer
         Try
-            con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+            con = New SqlConnection(My.Settings.FMIDataConnectionString)
             query = "select count(Student_ID) from Students "
             cmd = New SqlCommand(query, con)
             con.Open()
@@ -331,7 +331,7 @@ Public Class StudentAdd
         Dim lastSrPrimary As String = Nothing
         Dim lastSrSecondary As String = Nothing
         Try
-            con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+            con = New SqlConnection(My.Settings.FMIDataConnectionString)
             query = "select [SR no] from Students where [student_id]=(select max(student_id) from students) AND [SR no] Like @likep"
             cmd = New SqlCommand(query, con)
             cmd.Parameters.AddWithValue("likep", "P%")
@@ -342,7 +342,7 @@ Public Class StudentAdd
             XtraMessageBox.Show(ex.Message)
         End Try
         Try
-            con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+            con = New SqlConnection(My.Settings.FMIDataConnectionString)
             query = "select [SR no] from Students where [student_id]=(select max(student_id) from students) AND [SR no] Like @like"
             cmd = New SqlCommand(query, con)
             cmd.Parameters.AddWithValue("like", "S%")

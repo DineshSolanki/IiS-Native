@@ -13,7 +13,7 @@ Public Class LogForm
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
         Cursor = Cursors.WaitCursor
         Try
-            con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+            con = New SqlConnection(My.Settings.FMIDataConnectionString)
             con.Open()
             cmd = New SqlCommand("SELECT RTRIM(UserID),RTRIM(Date),RTRIM(Operation) from logs where Date between @date1 and @date2 order by Date", con)
             cmd.Parameters.Add("@date1", SqlDbType.DateTime, 30, "Date").Value = DateEdit1.EditValue.date

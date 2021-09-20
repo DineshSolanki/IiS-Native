@@ -32,7 +32,7 @@ Public Class ManageUser
             Exit Sub
         Else
             Try
-                _con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+                _con = New SqlConnection(My.Settings.FMIDataConnectionString)
                 _cmd = New SqlCommand("ADDUSER", _con)
                 _cmd.Parameters.AddWithValue("FullName", FullN.Text)
                 _cmd.Parameters.AddWithValue("UserName", UserName.Text)

@@ -62,7 +62,7 @@ Public Class Printrecipt
         Else
             _query =
                 "Select Fees_Id from FeeStructure where FeeStructure.Class=(select class from students where Name=@name AND fname=@fname)"
-            _con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+            _con = New SqlConnection(My.Settings.FMIDataConnectionString)
             _cmd = New SqlCommand(_query, _con)
             _cmd.Parameters.AddWithValue("name", SnameCombo.Text)
             _cmd.Parameters.AddWithValue("fname", FnameCombo.Text)
@@ -78,7 +78,7 @@ Public Class Printrecipt
             ' End Try
             _query =
                 "update feeData set paid=@Deposit,[Date of Deposit]=@Date,Due=@Due,[Total Fee]=@tf where [SR No]=@Sr"
-            _con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+            _con = New SqlConnection(My.Settings.FMIDataConnectionString)
             _cmd = New SqlCommand(_query, _con)
             _cmd.Parameters.AddWithValue("Deposit", TextEdit2.Text)
             _cmd.Parameters.AddWithValue("Date", DateTime.Now)
@@ -93,7 +93,7 @@ Public Class Printrecipt
             ' Catch ex As Exception
             'XtraMessageBox.Show(ex.Message)
             ' End Try
-            _con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+            _con = New SqlConnection(My.Settings.FMIDataConnectionString)
             _query =
                 "insert into Transact(DateOfDeposit,Fee_id,[SR no],AmountPaid,Depositor,Month) values(@Date,@FeeID,@SR,@Deposit,@Depositor,@Month)"
             _cmd = New SqlCommand(_query, _con)
@@ -214,7 +214,7 @@ Public Class Printrecipt
         If Not String.IsNullOrEmpty(TextEdit2.Text) Then
             Dim lastid As Integer
             Try
-                _con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+                _con = New SqlConnection(My.Settings.FMIDataConnectionString)
                 If Not String.IsNullOrEmpty(SrCombo.Text) Then
                     _query = "select Due from feeData where [SR No]=@sr"
                     _cmd = New SqlCommand(_query, _con)

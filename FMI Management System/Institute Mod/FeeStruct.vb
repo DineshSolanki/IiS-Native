@@ -18,7 +18,7 @@ Public Class FeeStruct
             End If
         Else
             _query = "insert into feeStructure(class,[Total Fee],Fee,[Admision Fee]) values(@Class,@TotalFee,@fee,@adFee)"
-            _con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+            _con = New SqlConnection(My.Settings.FMIDataConnectionString)
             _cmd = New SqlCommand(_query, _con)
             _cmd.Parameters.AddWithValue("Class", txtAddClass.Text)
             _cmd.Parameters.AddWithValue("TotalFee", TotalFee.Text)
@@ -60,7 +60,7 @@ Public Class FeeStruct
     Private Sub FeeStruct_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TotalFee.Properties.Mask.Culture = _culture
         Adfee.Properties.Mask.Culture = _culture
-        _con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+        _con = New SqlConnection(My.Settings.FMIDataConnectionString)
         _adapter.SelectCommand = New SqlCommand("SELECT * FROM FeeStructure", _con)
 
         _con.Open()

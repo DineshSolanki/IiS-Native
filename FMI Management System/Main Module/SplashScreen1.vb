@@ -56,7 +56,7 @@ Public Class SplashScreen1
         Dim st As String = (txtHardwareID.Text) + (txtSerialNo.Text)
         TextEdit1.Text = Encryption.MakePassword(st, 679)
         Try
-            con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+            con = New SqlConnection(My.Settings.FMIDataConnectionString)
             con.Open()
             Dim ct As String = "select RTRIM(ActivationID) from Activation where HardwareID=@d1 and SerialNo=@d2"
             cmd = New SqlCommand(ct)

@@ -70,10 +70,10 @@ Namespace My
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
          Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\lib\IMSData.m"& _ 
-            "df;Initial Catalog=IMSData;Integrated Security=True;User Instance=False")>  _
-        Public ReadOnly Property FMIDATAConnectionString() As String
+            "df;Integrated Security=True;User Instance=False;Initial Catalog=IMSData;")>  _
+        Public ReadOnly Property FMIDataConnectionString() As String
             Get
-                Return CType(Me("FMIDATAConnectionString"),String)
+                Return CType(Me("FMIDataConnectionString"),String)
             End Get
         End Property
         

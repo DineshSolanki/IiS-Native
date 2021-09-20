@@ -12,13 +12,13 @@ Public Class DashBoard
     End Sub
 
     Private Sub DashBoard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+        con = New SqlConnection(My.Settings.FMIDataConnectionString)
         query = "Select * from InstituteInfo Where Id=1"
         cmd = New SqlCommand(query, con)
         con.Open()
         If cmd.ExecuteScalar() <> 0 Then
             con.Close()
-            con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+            con = New SqlConnection(My.Settings.FMIDataConnectionString)
             query = "Select Logo from InstituteInfo Where Id=1"
             cmd = New SqlCommand(query, con)
             con.Open()

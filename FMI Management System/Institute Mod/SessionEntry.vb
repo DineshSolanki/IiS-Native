@@ -13,7 +13,7 @@ Public Class SessionEntry
             XtraMessageBox.Show("Please Enter A Value For Session")
             Exit Sub
         End If
-        con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+        con = New SqlConnection(My.Settings.FMIDataConnectionString)
         query = "Insert into Sessions(Session) values(@session)"
         cmd = New SqlCommand(query, con)
         cmd.Parameters.AddWithValue("session", TextEdit1.Text)
@@ -45,7 +45,7 @@ Public Class SessionEntry
             MsgBox("Please select a Existing Session First!", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
             Exit Sub
         End If
-        con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+        con = New SqlConnection(My.Settings.FMIDataConnectionString)
         query = "Select Session from students where Session=@d1"
         cmd = New SqlCommand(query, con)
         cmd.Parameters.AddWithValue("d1", ListBoxControl1.Text)

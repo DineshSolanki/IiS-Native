@@ -15,7 +15,7 @@ Module ModFunc
         Return strmsg
     End Function
     Sub LogFunc(ByVal st1 As String, ByVal st2 As String)
-        con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+        con = New SqlConnection(My.Settings.FMIDataConnectionString)
         con.Open()
         Dim cb As String = "insert into Logs(UserID,Date,Operation) VALUES (@d1,@d2,@d3)"
         cmd = New SqlCommand(cb)
@@ -29,7 +29,7 @@ Module ModFunc
     Function ExitConfirm(form As DevExpress.XtraEditors.XtraForm) As Boolean
 
         Dim action As New DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction() With {.Caption = "Confirm", .Description = "Close the application?"}
-        Dim command1 As New DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutCommand() With {.Text = "Close", .Result = System.Windows.Forms.DialogResult.Yes}
+        Dim command1 As New FlyoutCommand() With {.Text = "Close", .Result = System.Windows.Forms.DialogResult.Yes}
         Dim command2 As New DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutCommand() With {.Text = "Cancel", .Result = System.Windows.Forms.DialogResult.No}
         action.Commands.Add(command1)
         action.Commands.Add(command2)
@@ -78,7 +78,7 @@ Module ModFunc
         Dim lastSrSecondary As String = Nothing
         Dim generatedSr As String = Nothing
         Try
-            con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+            con = New SqlConnection(My.Settings.FMIDataConnectionString)
             query = "select [SR no] from Students where [student_id]=(select max(student_id) from students) AND [SR no] Like @likep"
             cmd = New SqlCommand(query, con)
             cmd.Parameters.AddWithValue("likep", "P%")
@@ -89,7 +89,7 @@ Module ModFunc
             XtraMessageBox.Show(ex.Message)
         End Try
         Try
-            con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+            con = New SqlConnection(My.Settings.FMIDataConnectionString)
             query = "select [SR no] from Students where [student_id]=(select max(student_id) from students) AND [SR no] Like @like"
             cmd = New SqlCommand(query, con)
             cmd.Parameters.AddWithValue("like", "S%")

@@ -48,7 +48,7 @@ Public Class PromoteStu
     Private Sub SimpleButton4_Click(sender As Object, e As EventArgs) Handles SimpleButton4.Click
         listView1.Items.Clear()
         Try
-            con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+            con = New SqlConnection(My.Settings.FMIDataConnectionString)
             con.Open()
             cmd = New SqlCommand("select [SR no],Name from Students where session=@ses AND currentClass=@class  order by Name", con)
             cmd.Parameters.AddWithValue("ses", TextEdit1.Text)
@@ -71,7 +71,7 @@ Public Class PromoteStu
         For Each i As ListViewItem In listView1.Items
             If i.Checked = True Then
                 flag = True
-                con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+                con = New SqlConnection(My.Settings.FMIDataConnectionString)
                 Dim cd As String = "update students set Session=@d1,currentClass=@d3,[SR no]=@d4 where [SR no]=@d2"
                 cmd = New SqlCommand(cd)
                 cmd.Parameters.AddWithValue("@d1", TextEdit4.Text)
@@ -93,7 +93,7 @@ Public Class PromoteStu
 
     End Sub
     Public Sub UpdateFeeData()
-        con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+        con = New SqlConnection(My.Settings.FMIDataConnectionString)
         query = "Select fees_id from FeeStructure where Class=@Class"
         cmd = New SqlCommand(query, con)
         cmd.Parameters.AddWithValue("Class", ComboBoxEdit1.Text)

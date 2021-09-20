@@ -10,7 +10,7 @@ Public Class FeeDataOneView
 
 
     Private Sub Fee_Data_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        _con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+        _con = New SqlConnection(My.Settings.FMIDataConnectionString)
         _adapter.SelectCommand = New SqlCommand("SELECT FeeData.*,Students.Name,Students.Fname,FeeStructure.Class FROM FeeData,Students,FeeStructure where Students.[SR no]=FeeData.[SR no] AND FeeStructure.Fees_Id=FeeData.Fee_id", _con)
         Dim myTable As New DataTable
         _con.Open()

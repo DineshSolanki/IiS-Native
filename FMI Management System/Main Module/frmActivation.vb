@@ -49,7 +49,7 @@ Public Class FrmActivation
             TextBox1.Text = Encryption.MakePassword(st, 679)
 
             If txtActivationID.Text = TextBox1.Text Then
-                con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+                con = New SqlConnection(My.Settings.FMIDataConnectionString)
                 con.Open()
                 Dim cb1 As String = "insert into Activation(HardwareID,SerialNo,ActivationID) VALUES (@d1,@d2,@d3)"
                 cmd = New SqlCommand(cb1)

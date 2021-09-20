@@ -9,7 +9,7 @@ Public Class StaffRecord
 
     Private Sub StaffRecord_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         GridView1.OptionsBehavior.Editable = False
-        _con = New SqlConnection(My.Settings.FMIDATAConnectionString)
+        _con = New SqlConnection(My.Settings.FMIDataConnectionString)
 
         Dim adapter As New SqlDataAdapter()
         adapter.SelectCommand = New SqlCommand("SELECT * FROM staff", _con)
